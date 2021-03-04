@@ -1,13 +1,13 @@
 <template>
   <div id="app" class="d-flex justify-content-center">
     <div class="w-75 p-3">
-      <h2>Інформація про користувача</h2>
+      <h2>Информация о пользователе</h2>
       <hr>
       <AddUser
           :users="users"
       />
       <hr>
-      <p class="text-lg-left">Кількість користувачів: <b>{{users.length}}</b></p>
+      <p class="text-lg-left">Количество пользователей: <b>{{users.length}}</b></p>
       <UserList
           :users="users"
       />

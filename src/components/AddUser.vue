@@ -10,18 +10,18 @@
     >
       <div class="row g-3">
         <div class="col-sm-5">
-          <input type="text" v-model="name" class="form-control" placeholder="Your Name">
+          <input type="text" v-model="name" class="form-control" placeholder="Ваше имя">
         </div>
         <div class="col-sm-5">
-          <input type="email" v-model="email" class="form-control" placeholder="Your Email">
+          <input type="email" v-model="email" class="form-control" placeholder="Ваш Email">
         </div>
         <div class="col-sm">
-          <input @keypress="onlyNumber" type="text" v-model.number="age" class="form-control" placeholder="Your Age">
+          <input @keypress="onlyNumber" type="text" v-model.number="age" class="form-control" placeholder="Ваш возраст">
         </div>
       </div>
       <br>
       <div class="col">
-        <button :disabled="isDisabled" type="submit" class="btn btn-primary">Add User</button>
+        <button :disabled="isDisabled" type="submit" class="btn btn-primary">Добавить пользователя</button>
       </div>
 
     </form>
@@ -66,7 +66,7 @@ export default {
         this.emptyField();
         return false;
       } else if (String(this.name).length > 20) {
-        this.errors.push('Поле: name. Длина имени не должна превышать 20 символов');
+        this.errors.push('Поле: имя. Длина имени не должна превышать 20 символов');
       }
 
       if (!this.email) {
@@ -82,7 +82,7 @@ export default {
         this.emptyField();
         return false;
       } else if (Number.isNaN(Number(this.age)) || Number(this.age) < 0 || Number(this.age) > 999) {
-        this.errors.push('Поле: age. Укажите корректный возраст');
+        this.errors.push('Поле: возраст. Укажите корректный возраст');
       }
 
       if (!this.errors.length) {
